@@ -1,6 +1,6 @@
 package lecture01;
 
-public class kadai3 {
+public class Exercise1_3 {
     public static void main(String[] args) {
         int age = 19;
 

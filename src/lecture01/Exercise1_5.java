@@ -1,6 +1,6 @@
 package lecture01;
 
-public class kadai5 {
+public class Exercise1_5 {
     public static void main(String[] args) {
         int[] score = {41, 85, 72, 38, 80};
 
