@@ -10,6 +10,7 @@ public class Exercise3_3 {
         System.out.println("2つ目の整数を入力してください：");
         String input2 = scanner.nextLine();
 
+        //parseInt()...受け取った文字列を32bit整数値に変換するIntegerクラスのメソッド
         int number1 = Integer.parseInt(input1);
         int number2 = Integer.parseInt(input2);
         int number3 = number1 + number2;
