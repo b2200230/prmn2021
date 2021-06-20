@@ -11,8 +11,9 @@ public class Fighter {
         this.name = name;
     }
 
-    public void attack(Fighter enemy){      //ここの処理がどうなっているのかよくわからない
-        enemy.hitPoint = enemy.getHitPoint() - power;
+    public void attack(Fighter enemy){
+        //setHitPoint()...()の中を引数として持って行って、計算した結果を代入する
+        enemy.setHitPoint( enemy.getHitPoint() - power );
         System.out.println( name + "は" + enemy.getName() + "に" + power + "ダメージを与えた。");
         System.out.println( enemy.getName() + "の残り hitPoint : " + enemy.getHitPoint());
     }
@@ -25,9 +26,8 @@ public class Fighter {
         return hitPoint;
     }
 
-    public int setHitPoint(int hitPoint){      //使われていないが、使いどころがわからない
+    public void setHitPoint(int hitPoint){
         this.hitPoint = hitPoint;
-        return hitPoint;
     }
 
     public String getName(){

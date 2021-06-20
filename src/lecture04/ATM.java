@@ -1,13 +1,11 @@
 package lecture04;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class ATM {
     private ArrayList<Account> accountList;
 
     public ATM(){
-        //?...accountListの初期化がよくわからない
         this.accountList = new ArrayList<>();
     }
 
@@ -18,7 +16,8 @@ public class ATM {
 
     public boolean existsAccount(String name,String number){
         for(Account account : accountList){
-            if(account.getName() == name && account.getNumber() == number){
+            //.equals()...文字の「=」
+            if(account.getName().equals(name) && account.getNumber().equals(number)){
                 System.out.println("名前:" + name + " 口座番号:" + number + " は存在します。");
                 return true;
             }
@@ -30,25 +29,24 @@ public class ATM {
     //long型...64bitの整数型（int型は32bit）
     public void deposit(String number,long money){      //入金
         for(Account account : accountList){
-            if(account.getNumber() == number){
-                account.balance = account.getBalance() + money;
+            if(account.getNumber().equals(number)){
+                account.setBalance( account.getBalance() + money );
                 System.out.println("口座番号:" + number + " に " + money + " 円入金しました。");
             }
         }
     }
 
-    public  long withdraw(String number,long money) {    //引出
+    public void withdraw(String number,long money) {    //引出
         for(Account account : accountList) {
-            if(account.getNumber() == number) {
+            if(account.getNumber().equals(number)) {
                 if (account.getBalance() < money) {
                     System.out.println("口座番号:" + number + " から " + money + " 円引き出せませんでした。残高:" + account.getBalance() + " 円です。");
                 }
                 else {
-                    account.balance -= money;
+                    account.setBalance( account.getBalance() - money );
                     System.out.println("口座番号:" + number + " から " + money + " 円引き出しました。残高:" + account.getBalance() + " 円です。");
                 }
             }
         }
-        return 0;   //戻り値がわからない
     }
 }

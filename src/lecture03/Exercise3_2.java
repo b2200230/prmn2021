@@ -24,9 +24,6 @@ public class Exercise3_2 {
             System.out.println("[" + strings.indexOf(string) + "] " + string);
             //strings.indexOf(string)...要素の順番
             //strings...配列      indexOf(string)...stringが何番目か検索
-
-            //System.out.println();...表示した後、自動で改行する
-            //System.out.print();.....表示した後、改行しない
         }
     }
 }

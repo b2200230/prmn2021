@@ -23,9 +23,9 @@ public class Account {
         return balance;
     }
 
-    public long setBalance(long balance){
+    public void setBalance(long balance){
         this.balance = balance;
-        return balance;
     }
 
+    //Altキー＋Fnキー＋Delキー
 }
